@@ -4,6 +4,7 @@
 #         self.val = x
 #         self.next = None
 
+
 class Solution:
     def swapPairs_orig(self, head):
         """
@@ -21,7 +22,7 @@ class Solution:
             prev.next = first.next
             first.next = second.next
             second.next = first
-            
+
             prev = first
             first = first.next
             if first is None:
@@ -29,7 +30,7 @@ class Solution:
             second = first.next
         return dummy.next
         # printList(dummy.next)
-    
+
     def swapPairs(self, head):
         if head == None or head.next == None:
             return head
@@ -44,11 +45,10 @@ class Solution:
             point = point.next.next
         # printList(res.next)
         return res.next
-    
-    
+
+
 def printList(head):
     node = head
     while node != None:
         print(node.val)
         node = node.next
-    
