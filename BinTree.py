@@ -38,7 +38,7 @@ def populateTreeFromList(listValues:[int]) -> BinTree:
 
 
 def printTree_inOrder(root:BinTree):
-	if root.left: printTree_inOrder(root.left)
+	if root.left: printTree_inOrder(root.left) 
 	print(root.value, end = " ")
 	if root.right: printTree_inOrder(root.right)
 

@@ -33,8 +33,19 @@ class Solution:
                     right += 1
         print(nums)
 
+# using snowballing strat
+def moveZeroes(nums:[int]) -> None:
+    snowball = 0
+    for i in range(len(nums)):
+        if nums[i] == 0:
+            snowball += 1
+        elif snowball >= 0:
+            nums[i], nums[i-snowball] = nums[i-snowball], nums[i]
+    print(nums)
+
 ip = [0,0,0,0,5,1,4,0,6,0,7,0,8,0]
 
 ip = [0,5,0,0,1,6]
-ip = [1,0]
-Solution().moveZeroes(ip)
+# ip = [1,0]
+Solution().moveZeroes(ip) 
+moveZeroes(ip)

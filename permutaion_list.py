@@ -23,5 +23,5 @@ def permute(arr:[str])-> [str]:
 	return ret
 
 
-res = permute([1,2,3,4])
+res = permute([1,2,3])
 print(res)
