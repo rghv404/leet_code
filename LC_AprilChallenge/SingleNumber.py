@@ -22,6 +22,7 @@ class Solution:
    		return [num for num, val in bucket.items() if val == 1][0]
 
 
+#there's another amazing method to solve this to XOR the numbers. It's incredible that 
 
 ip = [1,1,2]
 res = Solution().singleNumber(ip)

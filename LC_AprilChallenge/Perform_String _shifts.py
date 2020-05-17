@@ -54,7 +54,7 @@ def stringShift(s: str, shift: [[int]]) -> str:
 		# left shift
 		return s[cumulativeShift:] + s[:cumulativeShift]
 
-s = "abcdefgdshfgkdshkfgdsnbkgyrdeiodsh,kvbndfsihytsdkbvskgftiesw"
+s = "abcdefgdshfgkdshkfgdsnbkgyrdeiodshkvbndfsihytsdkbvskgftiesw"
 shift = []
 for i in range(100):
 	shift.append([random.randint(0, 1), random.randint(0, 100)])
