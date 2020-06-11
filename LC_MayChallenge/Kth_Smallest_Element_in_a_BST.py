@@ -52,22 +52,22 @@ def kthSmallest_wrong(root: TreeNode, k: int) -> int:
 
 # other method is to do sort of inordedr traversal iteratively 
 def kthSmallest(root: TreeNode, k: int) -> int:
-	stack, node = [root], root
-	while stack:
-		while node.left:
-			stack.append(node.left)
+	stack, node = [], root
+	while True:
+		while node:
+			stack.append(node)
 			node = node.left
 		
 		node = stack.pop()
 		k -= 1
 		if not k:
 			return node.value
-		node = node.right
+		node = node.right# if node else None
 
 
-ip = [1,2,2,3,3,3,3,4,4,4,4,4,4,"null","null",5,5]
-# ip = [1,2,2,3,3,"null","null",4,4]
+# ip = [1,2,2,3,3,3,3,4,4,4,4,4,4,"null","null",5,5]
+ip = [1,2,2,3,3,"null","null",4,4]
 root = TreeNode.populateTreeFromList(ip)
 # TreeNode.printTree_inOrder(root)
-val = kthSmallest(root,1)
+val = kthSmallest(root,2)
 print(val)

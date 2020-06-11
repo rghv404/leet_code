@@ -53,7 +53,7 @@ def findMaxLength(nums: [int]) -> int:
 
 
 ip = [0,0,1,0,0,0,0,0,0,0,0,1,1,1,1,1]
-ip = [0,1,0,1,0,0,1]
-ip = [1,0]
-res = findMaxLength(ip)
+# ip = [0,1,0,1,0,0,1]
+# ip = [1,0]
+res = findMaxLength_naivee(ip)
 print(res)
