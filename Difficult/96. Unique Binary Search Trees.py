@@ -19,7 +19,7 @@ Given n = 3, there are a total of 5 unique BST's:
 
 # basically a catalan number 
 # OR using the approach of chooisng a root(i) and mkaing left subtree from 1...i-1 and 
-# right subtree of i...n ---> # becomes cartesian porduc tof these two parts
+# right subtree of i...n ---> # becomes cartesian porduct of these two parts
 
 #cartesian prioduct apporach
 def numTrees(n: int) -> int:

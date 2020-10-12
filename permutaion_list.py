@@ -18,8 +18,11 @@ def permute(arr:[str])-> [str]:
 	# iterate the original list and for each item permute on rest of list
 	for i, item in enumerate(arr):
 		remList = arr[:i] + arr[i+1:]
+		print('Rem list: ', remList)
 		for comb in permute(remList):
+			print('Comb:', comb)
 			ret.append([item] + list(comb))
+			print('Ret', ret, 'when comb', comb)
 	return ret
 
 
